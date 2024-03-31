@@ -1,0 +1,73 @@
+body {
+    background-color: black;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.space {
+    width: 1000px;
+    height: 550px;
+    border: 2px solid white;
+}
+
+.sun {
+    height: 80px;
+    width: 80px;
+    border-radius: 80px;
+    background: yellow;
+    box-shadow: 0px 0px 50px yellow;
+}
+
+.earth {
+    height: 45px;
+    width: 45px;
+    border-radius: 70px;
+    background: rgb(255, 22, 22);
+    background: linear-gradient(90deg, rgba(255, 22, 22, 1) 0%, rgba(10, 213, 23, 1) 0%, rgba(22, 163, 101, 1) 40%, rgba(46, 64, 255, 1) 71%);
+    box-shadow: 0px 0px 20px blue;
+    /* position: relative; */
+    /* top: 120px; */
+    animation: earth 7s infinite linear;
+
+}
+
+.moon {
+    height: 30px;
+    width: 30px;
+    border-radius: 50px;
+    background-color: rgb(148, 148, 165);
+    box-shadow: 0px 0px 7px white;
+    position: relative;
+    /* bottom: 50px; */
+    /* transform: translate(30px); */
+    animation-name: moon;
+    /* animation-duration: 1s; */
+    /* animation-delay: -2s; */
+    /* animation-iteration-count: infinite; */
+    animation: moon 2s infinite linear;
+
+}
+
+@keyframes moon {
+    0% {
+        transform: rotate(0deg) translateY(50px) rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg) translateY(50px) rotate(-360deg);
+    }
+}
+
+@keyframes earth {
+    0% {
+        transform: rotate(0deg) translateY(130px) rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg) translateY(130px) rotate(-360deg);
+    }
+}
